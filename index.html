@@ -101,7 +101,8 @@
        text-shadow:0 0 8px #bfe6ff,0 0 16px #9fd8ff,0 0 22px rgba(255,255,255,.6);animation:tw 2.6s ease-in-out infinite}
   @keyframes swirl{to{transform:rotate(360deg)}}
   @keyframes tw{0%,100%{opacity:1}50%{opacity:.3}}
-  @media (prefers-reduced-motion:reduce){ .swirl{animation:none} .swirl i{animation:none} }
+  .trail{position:absolute;inset:0;z-index:4;pointer-events:none}
+  @media (prefers-reduced-motion:reduce){ .swirl{animation:none} .swirl i{animation:none} .trail{display:none} }
   /* ---------- BOTÕES ---------- */
   .actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}
   .btn{display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;cursor:pointer;
@@ -184,6 +185,20 @@
         <i style="left:72%;top:14%;font-size:16px;animation-delay:1.0s">✧</i>
         <i style="left:88%;top:29%;font-size:14px;animation-delay:.4s">❄</i>
       </div>
+      <svg class="trail" viewBox="0 0 900 1202" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
+        <defs>
+          <filter id="cometGlow" x="-60%" y="-60%" width="220%" height="220%">
+            <feGaussianBlur stdDeviation="6" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <path id="trailPath" fill="none" d="M540,107 C640,120 712,185 722,305 C736,470 740,620 700,760 C660,872 540,922 450,992 C360,930 300,900 250,818 C190,738 175,638 192,520 C212,430 300,318 382,260 C442,212 500,150 540,107 Z"/>
+        </defs>
+        <g filter="url(#cometGlow)" fill="#eaffff">
+          <circle r="7"><animateMotion dur="6s" repeatCount="indefinite" rotate="auto"><mpath xlink:href="#trailPath" href="#trailPath"/></animateMotion></circle>
+          <circle r="5"><animateMotion dur="6s" begin="-2s" repeatCount="indefinite"><mpath xlink:href="#trailPath" href="#trailPath"/></animateMotion></circle>
+          <circle r="3.5"><animateMotion dur="6s" begin="-4s" repeatCount="indefinite"><mpath xlink:href="#trailPath" href="#trailPath"/></animateMotion></circle>
+        </g>
+      </svg>
     </div>
 
     <h1>Vitoria</h1>
