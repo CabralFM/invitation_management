@@ -95,13 +95,7 @@
   .castle{display:block;width:calc(100% + 44px);margin:6px -22px 0}
 
   .hero{margin:16px -8px 0;border-radius:22px;overflow:hidden;box-shadow:0 10px 30px rgba(5,20,70,.45),0 0 0 3px rgba(255,255,255,.6)}
-  .hero img{display:block;width:100%;height:auto;transform-origin:50% 55%;
-       animation:heroSway 5.5s ease-in-out infinite;will-change:transform}
-  @keyframes heroSway{
-    0%,100%{transform:rotate(-3deg) scale(1.09)}
-    50%{transform:rotate(3deg) scale(1.09)}
-  }
-  @media (prefers-reduced-motion:reduce){ .hero img{animation:none;transform:none} }
+  .hero img{display:block;width:100%;height:auto}
   /* ---------- BOTÕES ---------- */
   .actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}
   .btn{display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;cursor:pointer;
