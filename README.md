@@ -4,8 +4,8 @@ Convite de aniversário que abre no telemóvel sem login, a partir de um link do
 Cada confirmação é guardada automaticamente num Google Sheet (grátis) e há uma página de
 administração privada com a lista de presenças e exportação para Excel.
 
-**Site:** https://cabralfm.github.io/convite-vitoria/
-**Admin:** https://cabralfm.github.io/convite-vitoria/admin.html (precisa da chave de administração)
+**Site:** https://cabralfm.github.io/invitation_management/
+**Admin:** https://cabralfm.github.io/invitation_management/admin.html (precisa da chave de administração)
 
 ## Como funciona (custo zero)
 
@@ -64,10 +64,10 @@ As folhas `respostas` e `convidados` são criadas automaticamente na primeira ut
    Copia também o link do Sheet para `SHEET_URL`.
 
 ### 4. Publicar o site no GitHub Pages
-1. Faz push deste código para o repositório público `CabralFM/convite-vitoria`.
+1. Faz push deste código para o repositório público `CabralFM/invitation_management`.
 2. No GitHub: **Settings → Pages**.
 3. **Source:** Deploy from a branch → branch `main` / `/root`. Guardar.
-4. Em 1–2 minutos o site fica em https://cabralfm.github.io/convite-vitoria/
+4. Em 1–2 minutos o site fica em https://cabralfm.github.io/invitation_management/
 
 ### 5. Testar
 1. Abre o site e faz uma confirmação de teste.
